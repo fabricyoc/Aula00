@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade02-2</title>
+</head>
+<body>
+    <h2>Atividade 02</h2>
+    <h3 id="saida"></h3>
+   
+   <script>
+        var s1 = 0;
+        var s2 = 3.14;
+        var s3 = Infinity;
+        var s4 = NaN;
+        var s5 = true;
+        var s6 = 4>1;
+        var s7 = "texto";
+        var s8 = "É tetra" + 1994;
+        var s9 = Symbol("id");
+        var s10 = Date;
+        var s11 = String;
+        var s12 = [1,2,3,4];
+        var s13 = null;
+        var s14 = undefined;
+        var s15 = alert;
+        
+        for (let i = 1; i <= 15; i++) {
+            let varValue = window["s" + i];
+            document.getElementById("saida").innerHTML += typeof(varValue) + "<br>";
+            
+        }
+
+    </script>
+</body>
+</html>

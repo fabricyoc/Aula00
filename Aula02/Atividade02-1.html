@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade02-1</title>
+</head>
+
+<body>
+    <h1>Exercício</h1>
+    <h3>Atividade 02-1</h3>
+    <p id="meuTexto"></p>
+
+    <script>
+        /*
+        var a = 1;
+        var b = 2;
+        var c = 3;
+        var d = 4;
+        var e = 5;
+        var txt1 = "Aprendi";
+        var txt2 = "JavaScript!!!";
+        var saida = e + ", " + d + ", " + c + ", " + b + ", " + a + "... " + txt1 + " " + txt2;
+        document.getElementById("meuTexto").innerHTML = saida;
+        */
+        var saida = document.getElementById("meuTexto");
+        for (let i = 5; i >= 1; i--) {
+            if (i > 1) {
+                saida.innerHTML += i + ", ";
+            }
+            else
+            saida.innerHTML += i + "...";
+        }
+        saida.innerHTML += " Aprendi... JavaScript!";
+    </script>
+</body>
+
+</html>
