@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<body>
+    <h2>Bloco de Instruções</h2>
+    <button type="button" onclick="minhaFuncao()" >Clique Aqui</button>
+    
+    <p id="meu_texto_1"></p>
+    <p id="meu_texto_2"></p>
+    <button type="button" onclick="ocultar()" >Ocultar</button>
+
+    <script>
+        function minhaFuncao(){
+            document.getElementById("meu_texto_1").innerHTML = "Olá aluno!";
+            document.getElementById("meu_texto_2").innerHTML = "Estou gostando de programar!";
+        }
+        function ocultar(){
+            document.getElementById("meu_texto_1").innerHTML = "";
+            document.getElementById("meu_texto_2").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

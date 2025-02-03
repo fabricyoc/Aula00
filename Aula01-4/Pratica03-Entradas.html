@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<body>
+    <h2>Fornecendo valores para o JavaScript</h2>
+
+    Entrada:
+    <input type="text" id="meuTextoEntrada">
+    <button onclick="minhaFuncao()">Clique aqui</button>
+    <p id="meuTextoSaida"></p>
+
+    <script>
+        function minhaFuncao(){
+            var texto = document.getElementById("meuTextoEntrada").value;
+            document.getElementById("meuTextoSaida").innerHTML = texto;
+        }
+    </script>
+</body>
+</html>
