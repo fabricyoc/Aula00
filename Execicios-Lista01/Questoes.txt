@@ -1,0 +1,12 @@
+ Questão 13) Solicite 3 números ao usuário. Some os dois primeiros e divida pelo terceiro. Exemplo de saída: Número 1 vale 5, número 2 vale 5, número 3 vale 2. O resultado é 5.
+
+
+Questão 19) Solicite o salário bruto de uma pessoa e desconte 7% do INSS e 14% do IRRF.
+
+
+Questão 37) A lanchonete Gostosura vende apenas um tipo de sanduíche, cujo recheio inclui duas fatias de queijo, uma fatia de presunto e um hambúrguer. Sabendo que cada fatia de queijo ou presunto pesa 50 gramas, e que o hambúrguer pesa 100 gramas, faça um algoritmo em que o dono forneça a quantidade de sanduíches a fazer, e a máquina informe as quantidades (em quilos) de queijo, presunto e carne necessários para compra.
+
+
+Questão 41) Faça um algoritmo que receba o peso de uma pessoa, calcule e mostre:
+a) o novo peso se a pessoa engordar 15% sobre o peso digitado;
+b) o novo peso se a pessoa emagrecer 20% sobre o peso digitado. 
