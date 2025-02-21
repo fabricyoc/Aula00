@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .calculadora {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #display {
+            width: 200px;
+            height: 40px;
+            font-size: 24px;
+            text-align: right;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .botoes button {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .botoes button:hover {
+            background-color: #ddd;
+        }
+
+        .botoes button:active {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculadora">
+        <input type="text" id="display" disabled>
+        <div class="botoes">
+            <button onclick="addDisplay('7')">7</button>
+            <button onclick="addDisplay('8')">8</button>
+            <button onclick="addDisplay('9')">9</button>
+            <button onclick="addDisplay('/')">/</button>
+            <br/>
+            
+            <button onclick="addDisplay('4')">4</button>
+            <button onclick="addDisplay('5')">5</button>
+            <button onclick="addDisplay('6')">6</button>
+            <button onclick="addDisplay('*')">x</button>
+            <br/>
+            
+            <button onclick="addDisplay('1')">1</button>
+            <button onclick="addDisplay('2')">2</button>
+            <button onclick="addDisplay('3')">3</button>
+            <button onclick="addDisplay('-')">-</button>
+            <br/>
+            
+            <button onclick="addDisplay('0')">0</button>
+            <button onclick="addDisplay('.')">.</button>
+            <button onclick="calcular()">=</button>
+            <button onclick="addDisplay('+')">+</button>
+            <br/>
+
+            <button onclick="limparDisplay()">C</button>
+        </div>
+    </div>
+    <script>
+        function addDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function limparDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calcular() {
+            const display = document.getElementById('display');
+            try {
+                display.value = eval(display.value);
+            } catch (e) {
+                display.value = 'Erro';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
