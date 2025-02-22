@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada Web</title>
+</head>
+<body>
+    <img src="" id="img">
+    <h3><button onclick="toggle()" >Mudar</button></h3>
+
+    <script>
+        let lampadaLigada = "https://img.freepik.com/vetores-gratis/lampada-iluminada-realista-isolada_1284-41774.jpg";
+        let lampadaDesligada = "https://png.pngtree.com/png-vector/20240208/ourlarge/pngtree-light-bulb-turn-off-to-save-electrical-png-image_11720437.png";
+        let img = document.getElementById("img");
+        img.src = lampadaLigada;
+
+
+        function toggle(){            
+            if (img.src === lampadaLigada) {
+                img.src = lampadaDesligada;
+            } else {
+                img.src = lampadaLigada;
+            }
+        }
+    </script>
+</body>
+</html>
