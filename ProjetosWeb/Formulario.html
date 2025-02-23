@@ -9,7 +9,8 @@
         input {
             outline: none;
         }
-        #senhasDistintas{
+
+        #senhasDistintas {
             display: none;
             font-size: 12px;
             color: red;
@@ -58,6 +59,10 @@
                     senha.style.borderColor = "red";
                     confirmarSenha.style.borderColor = "red";
                     senhasDistintas.style.display = "block";
+                    
+                    setTimeout(() => {
+                        senhasDistintas.style.display = "none";
+                    }, 3000); // após 3s, desaparece a msg senhasDistintas
                 }
             }
         }
@@ -66,7 +71,7 @@
         //     senha.style.borderColor = "";
         // });
 
-        function mudarBorda(elemento){
+        function mudarBorda(elemento) {
             elemento.style.borderColor = "";
         }
     </script>
