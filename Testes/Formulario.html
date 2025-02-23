@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        input {
+            outline: none;
+        }
+        #senhasDistintas{
+            display: none;
+            font-size: 12px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cadastre-se</h1>
+    <form action="#" method="post">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" />
+        <br />
+
+        <p id="senhasDistintas">Senhas distintas</p>
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" onchange="mudarBorda(this)" />
+
+        <label for="confirmarSenha">Confirme sua senha:</label>
+        <input type="password" name="confirmarSenha" id="confirmarSenha" onchange="mudarBorda(this)" />
+        <br />
+
+        <input type="submit" id="cadastrar" onclick="verificarCampos()" value="Cadastrar" />
+    </form>
+
+    <script>
+        let senha = document.getElementById("senha");
+        let confirmarSenha = document.getElementById("confirmarSenha");
+        let senhasDistintas = document.getElementById("senhasDistintas");
+
+        function verificarCampos() {
+            event.preventDefault(); // Impede o envio do formulário
+
+            if (senha.value === "" || confirmarSenha.value === "") {
+                alert("É necessário cadastrar uma senha!");
+                senha.style.borderColor = "red";
+                confirmarSenha.style.borderColor = "red";
+            }
+            else {
+                if (senha.value === confirmarSenha.value) {
+                    alert("Usuário cadastrado com sucesso!")
+                    document.querySelector("form").submit();
+                }
+                else {
+                    alert("Senhas diferentes!");
+                    senha.style.borderColor = "red";
+                    confirmarSenha.style.borderColor = "red";
+                    senhasDistintas.style.display = "block";
+                }
+            }
+        }
+
+        // senha.addEventListener("change", function () {
+        //     senha.style.borderColor = "";
+        // });
+
+        function mudarBorda(elemento){
+            elemento.style.borderColor = "";
+        }
+    </script>
+</body>
+
+</html>
