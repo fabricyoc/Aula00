@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeçalho</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        header {
+            background-color: orange;
+            height: 150px;
+            padding: 20px;
+            box-shadow: 1px 2px 5px orangered;
+        }
+
+        #menu-principal {
+            display: flex;
+        }
+
+        #logo,
+        #login {
+            height: 100px;
+            width: 100px;
+            background-color: orangered;
+        }
+
+        #conteudo {
+            height: 40px;
+            width: 600px;
+            background-color: orangered;
+            margin: auto;
+        }
+
+        #menu-lista ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        ul > li {
+            margin: 10px;
+            position: relative; /* Para posicionar o submenu */
+        }
+
+        ul > li:hover {
+            background-color: orangered;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        /* Estilo do submenu (oculto inicialmente) */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            background-color: orangered;
+            border-radius: 10px;
+            padding: 10px;
+            width: 150px;
+        }
+
+        /* Mostrar o submenu quando passar o mouse sobre "Mais" */
+        li:hover .submenu {
+            display: block;
+        }
+
+        .submenu li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="menu-principal">
+            <div id="logo">LOGO</div>
+            <div id="conteudo">PESQUISA</div>
+            <div id="login">LOGIN</div>
+        </div>
+
+        <div id="menu-lista">
+            <ul>
+                <li>Todos os produtos</li>
+                <li>Bolsas</li>
+                <li>Bottons</li>
+                <li>Adesivos</li>
+                <li>Sobre</li>
+                <!-- Abaixo é onde aparece o "Mais" e o submenu -->
+                <li>Mais
+                    <ul class="submenu">
+                        <li>Opção 1</li>
+                        <li>Opção 2</li>
+                        <li>Opção 3</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Suspenso</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #lista {
+            list-style-type: none;
+            display: flex;
+            /* position é necessário para o submenu ficar suspenso */
+            position: relative;
+            background-color: orange;
+            justify-content: center;
+        }
+
+        #lista li {
+            padding: 10px;
+        }
+
+        #lista > li:hover {
+            background-color: orangered;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #sublista {
+            display: none;
+            list-style-type: none;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 30px;
+            background-color: brown;
+            border-radius: 5px;
+        }
+
+        #sublista > li:hover{
+            background-color: orangered;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>
+            Outros
+            <ul id="sublista">
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        let itemOutros = document.querySelector('#lista li:nth-child(5)');
+        let sublista = document.getElementById("sublista");
+       
+        // Quando o mouse PASSAR sobre o 5º item
+        itemOutros.addEventListener('mouseenter', function () {
+            sublista.style.display = "block";
+        });
+        
+        // Quando o mouse SAIR do 5º item
+        itemOutros.addEventListener('mouseleave', function () {
+            sublista.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
