@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hoisting</title>
+    <style>
+        #texto{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Exemplo de Hoisting</h2>
+    <p>
+        Hoisting (Içamento ou Elevação) é o comportamento do JavaScript que move as declaração das variáveis para o topo do programa.
+    </p>
+    <h2>Saída</h2>
+    <p id="texto"></p>
+
+    <script>
+        "use strict";
+        let x;
+        x = 100;
+        document.getElementById("texto").innerHTML = x;
+    </script>
+</body>
+
+</html>
